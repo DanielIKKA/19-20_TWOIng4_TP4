@@ -42,21 +42,19 @@ class FetchDb {
                             duration: data.Runtime, // en minutes,
                             actors: (actors === undefined) || (actors === "") ? "N/A" : _.split(actors, ','),
                             poster: data.Poster, // lien vers une image d'affiche,
-                            boxOffice: data.BoxOffice === "N/A" ? "N/A" : `${data.BoxOffice}$`, // en USD$,
+                            boxOffice: data.BoxOffice === "N/A" ? "N/A" : `${data.BoxOffice}`, // en USD$,
                             rottenTomatoesScore: ratingTomatoe === undefined ? ratings[0] : ratingTomatoe
                         });
 
                         if(index === movies.length-1) { emitter.emit(EVENT_DB_END)}
                     })
-                    .catch((err) => {console.error(err)})
+                    .catch((err) => {console.error(err, index)})
             });
         });
 
         emitter.on(EVENT_DB_END, () => {
             callback();
         });
-
-        return [];
     }
 }
 
