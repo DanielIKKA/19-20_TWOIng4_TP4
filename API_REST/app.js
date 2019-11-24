@@ -6,6 +6,7 @@ const API_URI = "/my_api_movies_TWtp4";
 
 // express Init
 let app_api = express();
+app_api.use(require('./middleware/allowCrossDomain'));
 
 
 //define routes
