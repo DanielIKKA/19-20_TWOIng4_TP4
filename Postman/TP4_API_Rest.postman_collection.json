@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "f4391d0a-fdb5-4d7d-b2bb-a2ea4b27fa75",
+		"name": "TP4_API_Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OMDb_API_tests",
+			"item": [
+				{
+					"name": "GET search movies by title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}?apikey={{API_KEY}}&s=jude&page=1",
+							"host": [
+								"{{API_URI}}"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{API_KEY}}"
+								},
+								{
+									"key": "s",
+									"value": "jude"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET search a movie by title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}?apikey={{API_KEY}}&t=job",
+							"host": [
+								"{{API_URI}}"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{API_KEY}}"
+								},
+								{
+									"key": "t",
+									"value": "job"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "My_API",
+			"item": [
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/movies",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "Don't forget to use the right environment !!"
+					},
+					"response": []
+				},
+				{
+					"name": "Get movie by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/movies/:id",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Don't forget to use the right environment !!"
+					},
+					"response": []
+				},
+				{
+					"name": "Create/Add a movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/movies?Title=ail&Year=2010&Runtime=123 min&actors=Acteur1,Acteur2,Acteur3&Poster=N/A&BoxOffice=N/A&ratingTomatoe=58%",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "Title",
+									"value": "ail"
+								},
+								{
+									"key": "Year",
+									"value": "2010"
+								},
+								{
+									"key": "Runtime",
+									"value": "123 min"
+								},
+								{
+									"key": "actors",
+									"value": "Acteur1,Acteur2,Acteur3"
+								},
+								{
+									"key": "Poster",
+									"value": "N/A"
+								},
+								{
+									"key": "BoxOffice",
+									"value": "N/A"
+								},
+								{
+									"key": "ratingTomatoe",
+									"value": "58%"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a movie by Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/movies/:id?movie=The nightmare before Christmas&yearOfRelease=2012&duration=128 min&poster=https://p4.storage.canalblog.com/42/40/1336942/102423209_o.jpg&boxOffice=$1,241,522&actors=N/A",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"query": [
+								{
+									"key": "movie",
+									"value": "The nightmare before Christmas"
+								},
+								{
+									"key": "yearOfRelease",
+									"value": "2012"
+								},
+								{
+									"key": "duration",
+									"value": "128 min"
+								},
+								{
+									"key": "poster",
+									"value": "https://p4.storage.canalblog.com/42/40/1336942/102423209_o.jpg"
+								},
+								{
+									"key": "boxOffice",
+									"value": "$1,241,522"
+								},
+								{
+									"key": "actors",
+									"value": "N/A"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a movie by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/movies/:id",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
