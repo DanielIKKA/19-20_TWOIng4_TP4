@@ -32,8 +32,8 @@ class Home extends React.Component {
         return (
             <Col>
                 <Row className={"justify-content-center"}>
-                    {this.state.movies.map((movie, index) =>
-                        <FeatureMovie key={index} movie={movie}/>
+                    {this.state.movies.map((movie) =>
+                        <FeatureMovie key={movie.id} movie={movie}/>
                     )}
                 </Row>
             </Col>

@@ -1,3 +1,28 @@
+.wrapper-feature h1 {
+    font-size: 1rem;
+}
 
+.wrapper-feature h2 {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 200;
+}
 
+.wrapper-feature:hover {
+    cursor: pointer;
+}
 
+.description-wrapper h2 {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
+}

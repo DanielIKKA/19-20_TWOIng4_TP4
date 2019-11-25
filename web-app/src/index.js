@@ -4,13 +4,15 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import * as serviceWorker from './Javascript/serviceWorker';
 
 //include Components
-import Home from './Javascript/Pages/Home'
+import Home from './Javascript/Pages/Home';
+import Description from './Javascript/Pages/Description'
 import './Stylesheet/index.css';
 
 
 const PathManager = () => (
     <Switch>
         <Route exact path={"/"} component={Home}/>
+        <Route exact path={'/:id'} component={Description}/>
     </Switch>
 );
 
