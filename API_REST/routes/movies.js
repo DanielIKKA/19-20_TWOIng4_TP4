@@ -17,6 +17,7 @@ router.get('/movies', (request, response) => {
     response.status(200).json(db);
 });
 
+
 //GET a movie by id
 router.get('/movies/:id', (request, response) => {
 
